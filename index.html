@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Słownik Śmiesznych Wyrazów</title>
+</head>
+<body>
+    
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Logowanie</h2>
+            <input type="text" id="username" placeholder="Login">
+            <input type="password" id="password" placeholder="Hasło">
+            <button id="login-btn">Zaloguj</button>
+            <p id="error-message" style="color: red; display: none;">Błąd logowania</p>
+        </div>
+    </div>
+
+    <h1>Słownik Śmiesznych Wyrazów</h1>
+    <p>Kliknij na literę, aby zobaczyć zabawne wyrazy na tę literę!</p>
+
+    <div id="search-container">
+        <input type="text" id="search-box" placeholder="Wyszukaj słowo..." oninput="searchWord()">
+        <button onclick="randomWord()">Losuj słowo</button>
+    </div>
+
+    <div id="alfabet">
+        <button class="letter-btn" onclick="showWords('A')">A</button>
+        <button class="letter-btn" onclick="showWords('B')">B</button>
+        <button class="letter-btn" onclick="showWords('C')">C</button>
+        <button class="letter-btn" onclick="showWords('D')">D</button>
+        <button class="letter-btn" onclick="showWords('E')">E</button>
+        <button class="letter-btn" onclick="showWords('F')">F</button>
+        <button class="letter-btn" onclick="showWords('G')">G</button>
+        <button class="letter-btn" onclick="showWords('H')">H</button>
+        <button class="letter-btn" onclick="showWords('I')">I</button>
+        <button class="letter-btn" onclick="showWords('J')">J</button>
+        <button class="letter-btn" onclick="showWords('K')">K</button>
+        <button class="letter-btn" onclick="showWords('L')">L</button>
+        <button class="letter-btn" onclick="showWords('M')">M</button>
+        <button class="letter-btn" onclick="showWords('N')">N</button>
+        <button class="letter-btn" onclick="showWords('O')">O</button>
+        <button class="letter-btn" onclick="showWords('P')">P</button>
+        <button class="letter-btn" onclick="showWords('R')">R</button>
+        <button class="letter-btn" onclick="showWords('S')">S</button>
+        <button class="letter-btn" onclick="showWords('T')">T</button>
+        <button class="letter-btn" onclick="showWords('U')">U</button>
+        <button class="letter-btn" onclick="showWords('W')">W</button>
+        <button class="letter-btn" onclick="showWords('Y')">Y</button>
+        <button class="letter-btn" onclick="showWords('Z')">Z</button>
+
+    </div>
+
+
+    <div id="words-container">    
+        <div id="words"></div>
+    </div>
+    <div id="definition-container">
+        <div id="definition"></div>
+    </div>
+</body>
+</html>
